@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 const express = require('express');
 const markdown = require('markdown').markdown;
 const cheerio = require('cheerio');
