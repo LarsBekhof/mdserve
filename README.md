@@ -6,7 +6,9 @@ MDServe is a tool to view markdown files in your browser
 
 ## Features
 **View markdown files in the browser:** While the MDServe server is running you can access all your markdown file through the HTTP path
+
 **Hot reloading:** Just safe your markdown file and the browser window will reload
+
 **Customizable styling:** Custom CSS stylesheets can be loaded
 
 ## Options
