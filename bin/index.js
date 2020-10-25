@@ -55,8 +55,11 @@ app.get(/^((?!socket.io).)*$/, (req, res) => {
 		res.send(dom.html());
 	});
 
-	io.on('connection', (socket) => {
-		fs.watchFile(path, { interval: 50 }, () => socket.emit('reload'));
+	io.once('connection', (socket) => {
+		fs.watchFile(path, { interval: 50 }, () => {
+			socket.emit('reload');
+			fs.unwatchFile(path);
+		});
 	});
 });
 
